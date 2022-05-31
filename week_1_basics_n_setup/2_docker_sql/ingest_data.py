@@ -1,3 +1,7 @@
+
+#!/usr/bin/env python
+# coding: utf-8
+
 import argparse
 import os
 import pyarrow.parquet as pq
@@ -23,7 +27,7 @@ def main(params):
     parquet_table = pq.read_table(filename)
     df = parquet_table.to_pandas()
 
-    df.to_sql(name="yellow_taxi_trips", con=engine, if_exists='append', chunksize=100000)
+    df.to_sql(name="yellow_taxi_data", con=engine, if_exists='append', chunksize=100000)
 
 
 if __name__ == '__main__':
