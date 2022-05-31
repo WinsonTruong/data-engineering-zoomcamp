@@ -1,11 +1,7 @@
 import sys
+import pandas as pd 
 
-import pandas as pd
-
+# some foolproof coolkid stuff
 print(sys.argv)
-
 day = sys.argv[1]
-
-# some fancy stuff with pandas
-
-print(f'job finished successfully for day = {day}')
+print(f"momma I made it {day}")
