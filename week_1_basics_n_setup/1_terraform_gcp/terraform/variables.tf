@@ -3,12 +3,12 @@ locals {
 }
 
 variable "project" {
-  description = "Your GCP Project ID"
+  description = "zoom-datacamp"
 }
 
 variable "region" {
   description = "Region for GCP resources. Choose as per your location: https://cloud.google.com/about/locations"
-  default = "europe-west6"
+  default = "us-central1" #iowa
   type = string
 }
 
@@ -21,4 +21,11 @@ variable "BQ_DATASET" {
   description = "BigQuery Dataset that raw data (from GCS) will be written to"
   type = string
   default = "trips_data_all"
+}
+
+variable "TABLE_NAME" {
+  description = "BigQuery Table"
+  type = string
+  default = "ny_trips"
+
 }
